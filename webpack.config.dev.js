@@ -3,6 +3,9 @@ const merge = require('webpack-merge');
 const config = require('./webpack.config');
 
 module.exports = merge(config, {
+    devServer: {
+        historyApiFallback: true
+    },
     output: {
         filename: '[name].js',
     },
